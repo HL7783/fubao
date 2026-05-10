@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>돌아오신걸 환영합니다! {{ username }}님!</h1>
+  <form action="{{ url_for('get_logout') }}">
+    <button>로그아웃</button>
+  </form>
+{% endblock %}
