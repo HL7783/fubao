@@ -2,7 +2,7 @@
 
 {% block content %}
   <h2>New Post</h2>
-  <form action="/post/new" method="post">
+  <form action="/posts/new" method="post">
     Title:
     <br>
     <input type="text" id="title" name="title">
@@ -15,7 +15,7 @@
     <button type="submit">Post</button>
   </form>
   <br>
-  <form action="/post">
+  <form action="/posts">
     <button>Go to Posts</button>
   </form>
 {% endblock %}

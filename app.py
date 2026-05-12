@@ -46,7 +46,7 @@ def get_posts_post_id(post_id):
     
     post = get_post_by_post_id(post_id)
     if post:
-        return render_template('posts.html', posts=posts)
+        return render_template('posts.html', posts=[post])
     else:
         return redirect(url_for('get_posts'))    
     
@@ -65,7 +65,7 @@ def edit_post(post_id):
         update_post(post_id, title, content)
         return redirect(url_for('get_posts_post_id', post_id=post_id))
 
-    return render_template('post_edit.html', posts=posts)
+    return render_template('post_edit.html', post=post)
 
 @app.route('/posts/<post_id>/delete', methods=['GET'])
 def get_posts_post_id_delete(post_id):
